@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AlphaProject.Tasks.Dtos;
-using AlphaProject.Core;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using AlphaProject.Persons;
 
 namespace AlphaProject.Tasks
 {

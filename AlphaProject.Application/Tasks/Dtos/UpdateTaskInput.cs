@@ -1,6 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Runtime.Validation;
-using AlphaProject.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

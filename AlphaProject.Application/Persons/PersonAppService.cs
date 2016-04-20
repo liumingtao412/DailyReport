@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AlphaProject.Persons.Dtos;
-using AlphaProject.Core;
 using Abp.Domain.Repositories;
 using AutoMapper;
 

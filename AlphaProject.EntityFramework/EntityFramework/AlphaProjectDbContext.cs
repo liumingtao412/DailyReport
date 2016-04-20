@@ -4,7 +4,8 @@ using AlphaProject.Authorization.Roles;
 using AlphaProject.MultiTenancy;
 using AlphaProject.Users;
 using System.Data.Entity;
-using AlphaProject.Core;
+using AlphaProject.Tasks;
+using AlphaProject.Persons;
 
 namespace AlphaProject.EntityFramework
 {

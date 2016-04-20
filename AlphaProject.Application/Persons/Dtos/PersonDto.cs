@@ -1,6 +1,5 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using AlphaProject.Core;
 
 namespace AlphaProject.Persons.Dtos
 {

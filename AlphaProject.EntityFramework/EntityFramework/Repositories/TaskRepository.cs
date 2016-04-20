@@ -1,5 +1,5 @@
 ﻿using Abp.EntityFramework;
-using AlphaProject.Core;
+using AlphaProject.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

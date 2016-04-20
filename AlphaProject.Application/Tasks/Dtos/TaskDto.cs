@@ -1,5 +1,4 @@
 ﻿using Abp.Application.Services.Dto;
-using AlphaProject.Core;
 using System;
 
 namespace AlphaProject.Tasks.Dtos

@@ -1,6 +1,6 @@
 using System.Data.Entity.Migrations;
 using AlphaProject.Migrations.SeedData;
-using AlphaProject.Core;
+using AlphaProject.Persons;
 
 namespace AlphaProject.Migrations
 {
