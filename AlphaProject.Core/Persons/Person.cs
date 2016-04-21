@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities;
+using AlphaProject.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,12 @@ namespace AlphaProject.Persons
         public virtual string Mobile { get; set; }
         [ForeignKey("PersonID")]
         public virtual ICollection<PersonReport> PersonReports { get; set; }
+
+        //[ForeignKey("UserId")]
+        public virtual User User { get; protected set; }
+        //public virtual long UserId { get; protected set; }
+
+        public virtual ICollection<Person_Project> Person_Projects { get; set; }
 
 
     }

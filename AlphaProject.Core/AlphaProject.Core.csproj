@@ -100,6 +100,7 @@
     <Compile Include="MultiTenancy\TenantManager.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\PersonReport.cs" />
+    <Compile Include="Persons\Person_Project.cs" />
     <Compile Include="Projects\Project.cs" />
     <Compile Include="Projects\ProjectReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

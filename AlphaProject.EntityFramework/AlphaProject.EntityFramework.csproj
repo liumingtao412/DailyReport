@@ -166,6 +166,18 @@
     <Compile Include="Migrations\201604210728582_AddProjectClass.Designer.cs">
       <DependentUpon>201604210728582_AddProjectClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604210823465_AddProjectState-eNum2.cs" />
+    <Compile Include="Migrations\201604210823465_AddProjectState-eNum2.Designer.cs">
+      <DependentUpon>201604210823465_AddProjectState-eNum2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604210825364_AddUserToPerson.cs" />
+    <Compile Include="Migrations\201604210825364_AddUserToPerson.Designer.cs">
+      <DependentUpon>201604210825364_AddUserToPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604210909202_Addm-nRelationOfPersonAndProject.cs" />
+    <Compile Include="Migrations\201604210909202_Addm-nRelationOfPersonAndProject.Designer.cs">
+      <DependentUpon>201604210909202_Addm-nRelationOfPersonAndProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AlphaProjectDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -226,6 +238,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604210728582_AddProjectClass.resx">
       <DependentUpon>201604210728582_AddProjectClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604210823465_AddProjectState-eNum2.resx">
+      <DependentUpon>201604210823465_AddProjectState-eNum2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604210825364_AddUserToPerson.resx">
+      <DependentUpon>201604210825364_AddUserToPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604210909202_Addm-nRelationOfPersonAndProject.resx">
+      <DependentUpon>201604210909202_Addm-nRelationOfPersonAndProject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
