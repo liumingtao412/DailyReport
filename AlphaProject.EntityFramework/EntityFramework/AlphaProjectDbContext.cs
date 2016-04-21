@@ -6,6 +6,7 @@ using AlphaProject.Users;
 using System.Data.Entity;
 using AlphaProject.Tasks;
 using AlphaProject.Persons;
+using AlphaProject.Projects;
 
 namespace AlphaProject.EntityFramework
 {
@@ -14,6 +15,7 @@ namespace AlphaProject.EntityFramework
         //TODO: Define an IDbSet for your Entities...
         public virtual IDbSet<Task> Tasks { get; set; }
         public virtual IDbSet<Person> Persons { get; set; }
+        public virtual IDbSet<Project> Projects { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

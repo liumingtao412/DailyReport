@@ -158,6 +158,14 @@
     <Compile Include="Migrations\201603231524362_AddRemarks.Designer.cs">
       <DependentUpon>201603231524362_AddRemarks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604210721146_AddRemarks1.cs" />
+    <Compile Include="Migrations\201604210721146_AddRemarks1.Designer.cs">
+      <DependentUpon>201604210721146_AddRemarks1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604210728582_AddProjectClass.cs" />
+    <Compile Include="Migrations\201604210728582_AddProjectClass.Designer.cs">
+      <DependentUpon>201604210728582_AddProjectClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AlphaProjectDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -212,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603231524362_AddRemarks.resx">
       <DependentUpon>201603231524362_AddRemarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604210721146_AddRemarks1.resx">
+      <DependentUpon>201604210721146_AddRemarks1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604210728582_AddProjectClass.resx">
+      <DependentUpon>201604210728582_AddProjectClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

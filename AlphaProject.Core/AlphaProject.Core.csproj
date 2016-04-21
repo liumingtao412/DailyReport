@@ -100,8 +100,8 @@
     <Compile Include="MultiTenancy\TenantManager.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\PersonReport.cs" />
-    <Compile Include="Project\Project.cs" />
-    <Compile Include="Project\ProjectReport.cs" />
+    <Compile Include="Projects\Project.cs" />
+    <Compile Include="Projects\ProjectReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Authorization\Roles\Role.cs" />
     <Compile Include="Authorization\Roles\RoleManager.cs" />
