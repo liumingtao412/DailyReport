@@ -7,6 +7,8 @@ namespace AlphaProject.Persons.Dtos
     public class PersonDto : EntityDto
     {
         public  string Name { get; set; }
+        public string EMail { get; set; }
+        public string Moblie { get; set; }
 
     }
 }

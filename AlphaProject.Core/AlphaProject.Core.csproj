@@ -98,7 +98,10 @@
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />
+    <Compile Include="Persons\IPersonManager.cs" />
+    <Compile Include="Persons\IPersonRepository.cs" />
     <Compile Include="Persons\Person.cs" />
+    <Compile Include="Persons\PersonManager.cs" />
     <Compile Include="Persons\PersonReport.cs" />
     <Compile Include="Persons\Person_Project.cs" />
     <Compile Include="Projects\Project.cs" />

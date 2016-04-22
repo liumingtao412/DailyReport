@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using AlphaProject.Persons.Dtos;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,14 @@ namespace AlphaProject.Persons
 {
     public interface IPersonAppService : IApplicationService
     {
-        GetPersonsOutput GetAllPersons();
-        GetPersonsOutput GetPersons(GetPersonsInput input);
-        GetPersonsOutput GetPersonByName(string name);
+        PagedResultOutput<PersonDto> GetPersons(GetPersonsInput input);
+     
+       
+        //void DeletePerson();
+        //void CreatePerson();
+        //void UpdatePerson();
+        void JoinProject(JoinProjectInput input);
+        void QuitProject(QuitProjectInput input);
+      
     }
 }

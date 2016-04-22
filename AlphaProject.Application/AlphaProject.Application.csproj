@@ -101,11 +101,14 @@
     <Compile Include="MultiTenancy\ITenantAppService.cs" />
     <Compile Include="MultiTenancy\Dto\TenantListDto.cs" />
     <Compile Include="MultiTenancy\TenantAppService.cs" />
+    <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
     <Compile Include="Persons\Dtos\GetPersonOutput.cs" />
     <Compile Include="Persons\Dtos\GetPersonsInput.cs" />
+    <Compile Include="Persons\Dtos\JoinProjectInput.cs" />
     <Compile Include="Persons\Dtos\PersonDto.cs" />
     <Compile Include="Persons\IPersonAppService.cs" />
     <Compile Include="Persons\PersonAppService.cs" />
+    <Compile Include="Persons\Dtos\QuitProjectInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
     <Compile Include="Roles\Dto\UpdateRolePermissionsInput.cs" />

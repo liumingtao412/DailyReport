@@ -8,15 +8,36 @@ using System.Threading.Tasks;
 
 namespace AlphaProject.Persons.Dtos
 {
-    public class GetPersonsInput : IInputDto
+    public class GetPersonsInput : IPagedResultRequest
     {
-        [Required]
-        public string Name { get; set; }
+        public const int DefaultPageSize = 10;
 
+        public string Name { get; set; }
+        public int? PersonId { get; set; }
+        public int? ProjectId { get; set; }
+
+        /// <summary>
+        /// 重写ToString方法，用来写日志
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return string.Format("[GetPersonsInput > Name = {0}]",Name);
         }
+
+        public int SkipCount { get; set; }
+
+        public int MaxResultCount { get; set;}
+
+        public GetPersonsInput()
+        {
+            MaxResultCount = DefaultPageSize;
+            SkipCount = 0;
+            Name = string.Empty;
+            PersonId = null;
+            ProjectId = null;
+        }
+
 
     }
 }

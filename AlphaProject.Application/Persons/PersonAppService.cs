@@ -7,51 +7,79 @@ using System.Threading.Tasks;
 using AlphaProject.Persons.Dtos;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using Abp.Application.Services.Dto;
+using Abp.Linq.Extensions;
 
 namespace AlphaProject.Persons
 {
     public class PersonAppService : ApplicationService, IPersonAppService
     {
-        private readonly IRepository<Person> _personRepository;
-        public PersonAppService(IRepository<Person> personRepository)
+        private readonly IPersonRepository _personRepository;
+        private readonly IPersonManager _personManager;
+        public PersonAppService(IPersonRepository personRepository,IPersonManager personManager)
         {
             _personRepository = personRepository;
+            _personManager = personManager;
 
         }
-        public GetPersonsOutput GetAllPersons()
+   
+
+        public PagedResultOutput<PersonDto> GetPersons(GetPersonsInput input)
         {
-            var persons = _personRepository.GetAll();
-            return new GetPersonsOutput
+            Logger.Info("Getting Persons for input:" + input.ToString());
+
+            if (input.ProjectId.HasValue)//查询某个项目内的人员
             {
-                Persons = Mapper.Map<List<PersonDto>>(persons)
-            };
-        }
+                ///多对多联合查询
+                var personsInProject = _personRepository.GetPersonsInProject(input.ProjectId.Value);
+                var personCount = personsInProject.Count();
+                if (!string.IsNullOrEmpty(input.Name))
+                {
+                    personsInProject = personsInProject.Where(p => p.Name == input.Name);
+                }
+                if (input.PersonId.HasValue)
+                {
+                    personsInProject = personsInProject.Where(p => p.Id == input.PersonId.Value);
+                }
 
-        public GetPersonsOutput GetPersonByName(string name)
-        {
-            var persons = _personRepository.GetAll().Where(p => p.Name == name);
-            
-
-            return new GetPersonsOutput
-            {
-                Persons = Mapper.Map<List<PersonDto>>(persons)
-            };
-        }
-
-        public GetPersonsOutput GetPersons(GetPersonsInput input)
-        {
-            Logger.Info("Getting Persons for input:" + input);
-
-            var persons = _personRepository.GetAll();
-            if (!string.IsNullOrEmpty(input.Name))
-            {
-                persons = persons.Where(p=>p.Name==input.Name);
+                return new PagedResultOutput<PersonDto>(
+                    personCount,
+                    Mapper.Map<List<PersonDto>>(personsInProject)
+                    );
             }
-
-            return new GetPersonsOutput
+            else//查询所有人员
             {
-                Persons = Mapper.Map<List<PersonDto>>(persons)
-            };
+                var personCount = _personRepository.Count();
+                var persons = _personRepository.GetAll().OrderBy(p => p.Name).PageBy(input);
+                if (!string.IsNullOrEmpty(input.Name))
+                {
+                    persons = persons.Where(p => p.Name == input.Name);
+                }
+                if (input.PersonId.HasValue)
+                {
+                    persons = persons.Where(p => p.Id == input.PersonId.Value);
+                }
+
+                return new PagedResultOutput<PersonDto>(
+                    personCount,
+                    Mapper.Map<List<PersonDto>>(persons)
+                    );
+            }
+          
+
+           
+        }
+
+
+        public void JoinProject(JoinProjectInput input)
+        {
+            _personManager.JoinProject(input.PersonId,input.ProjectId, input.IsLeader);
+        }
+
+
+        public void QuitProject(QuitProjectInput input)
+        {
+            _personManager.QuitProject(input.PersonId, input.ProjectId);
         }
     }
 }

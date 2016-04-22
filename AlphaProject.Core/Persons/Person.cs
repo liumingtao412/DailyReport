@@ -28,5 +28,7 @@ namespace AlphaProject.Persons
         public virtual ICollection<Person_Project> Person_Projects { get; set; }
 
 
+      
+
     }
 }
