@@ -11,6 +11,19 @@ namespace AlphaProject.Persons.Dtos
     public class GetPersonsInput : IPagedResultRequest
     {
         public const int DefaultPageSize = 10;
+        public int SkipCount { get; set; }
+
+        public int MaxResultCount { get; set; }
+
+        public GetPersonsInput()
+        {
+            MaxResultCount = DefaultPageSize;
+            SkipCount = 0;
+            Name = string.Empty;
+            PersonId = null;
+            ProjectId = null;
+        }
+
 
         public string Name { get; set; }
         public int? PersonId { get; set; }
@@ -25,18 +38,7 @@ namespace AlphaProject.Persons.Dtos
             return string.Format("[GetPersonsInput > Name = {0}]",Name);
         }
 
-        public int SkipCount { get; set; }
-
-        public int MaxResultCount { get; set;}
-
-        public GetPersonsInput()
-        {
-            MaxResultCount = DefaultPageSize;
-            SkipCount = 0;
-            Name = string.Empty;
-            PersonId = null;
-            ProjectId = null;
-        }
+     
 
 
     }

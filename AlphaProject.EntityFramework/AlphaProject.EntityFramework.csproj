@@ -179,6 +179,10 @@
     <Compile Include="Migrations\201604210909202_Addm-nRelationOfPersonAndProject.Designer.cs">
       <DependentUpon>201604210909202_Addm-nRelationOfPersonAndProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605111131267_AddProjectIdToPersonReport.cs" />
+    <Compile Include="Migrations\201605111131267_AddProjectIdToPersonReport.Designer.cs">
+      <DependentUpon>201605111131267_AddProjectIdToPersonReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AlphaProjectDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -248,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604210909202_Addm-nRelationOfPersonAndProject.resx">
       <DependentUpon>201604210909202_Addm-nRelationOfPersonAndProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605111131267_AddProjectIdToPersonReport.resx">
+      <DependentUpon>201605111131267_AddProjectIdToPersonReport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

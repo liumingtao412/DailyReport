@@ -40,5 +40,31 @@ namespace AlphaProject.Projects
                 Mapper.Map<List<ProjectDto>>(projects)
                 );
         }
+
+
+        public int CreateProject(CreateProjectInput input)
+        {
+           // throw new NotImplementedException();
+            return _projectRepository.InsertAndGetId(Mapper.Map<Project>(input));
+        }
+
+
+        public void DeleteProject(DeleteProjectInput input)
+        {
+
+            //throw new NotImplementedException();
+            if (input.Id.HasValue)
+            {
+                _projectRepository.Delete(input.Id.Value);
+            }
+        }
+
+
+        public void UpdateProject(UpdateProjectInput input)
+        {
+            //throw new NotImplementedException();
+            Project projectToUpdate = Mapper.Map<Project>(input);
+            _projectRepository.Update(projectToUpdate);
+        }
     }
 }

@@ -32,7 +32,18 @@ namespace AlphaProject.Persons
         {
             this.User = user;
         }
+  
+        public void WiteReport(PersonReport report)
+        {
+            this.PersonReports.Add(report);
+            
+        }
 
+        public IQueryable<PersonReport> GetReports()
+        {
+            return this.PersonReports.AsQueryable();
+        }
+       
 
       
 

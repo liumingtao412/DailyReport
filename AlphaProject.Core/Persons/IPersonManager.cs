@@ -14,5 +14,6 @@ namespace AlphaProject.Persons
         void QuitProject(int personId, int projectId);
 
         void AssignToUser(int personId, long userId);
+
     }
 }

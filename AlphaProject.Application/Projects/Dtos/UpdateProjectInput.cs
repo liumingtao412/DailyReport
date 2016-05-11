@@ -7,20 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlphaProject.Persons.Dtos
+namespace AlphaProject.Projects.Dtos
 {
-    [AutoMapTo(typeof(Person))]
-    public class UpdatePersonInput : IInputDto
+    [AutoMapTo(typeof(Project))]
+    public class UpdateProjectInput : IInputDto
     {
         [Required]
         public int? Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        [Required]
-        public string EMail { get; set; }
-
-        public string Mobile { get; set; }
-
-        public long? UserId { get; set; }
+        public string ProjectName { get; set; }
+        [Required]       
+        public ProjectState? State { get; set; }
     }
 }

@@ -101,6 +101,11 @@
     <Compile Include="MultiTenancy\ITenantAppService.cs" />
     <Compile Include="MultiTenancy\Dto\TenantListDto.cs" />
     <Compile Include="MultiTenancy\TenantAppService.cs" />
+    <Compile Include="PersonReports\Dtos\CreatePersonReportInput.cs" />
+    <Compile Include="PersonReports\Dtos\GetPersonReportsInput.cs" />
+    <Compile Include="PersonReports\Dtos\PersonReportDto.cs" />
+    <Compile Include="PersonReports\IPersonReportAppService.cs" />
+    <Compile Include="PersonReports\PersonReportAppService.cs" />
     <Compile Include="Persons\Dtos\CreatePersonInput.cs" />
     <Compile Include="Persons\Dtos\DeletePersonInput.cs" />
     <Compile Include="Persons\Dtos\GetPersonOutput.cs" />
@@ -111,8 +116,11 @@
     <Compile Include="Persons\IPersonAppService.cs" />
     <Compile Include="Persons\PersonAppService.cs" />
     <Compile Include="Persons\Dtos\QuitProjectInput.cs" />
+    <Compile Include="Projects\Dtos\CreateProjectInput.cs" />
+    <Compile Include="Projects\Dtos\DeleteProjectInput.cs" />
     <Compile Include="Projects\Dtos\GetProjectsInput.cs" />
     <Compile Include="Projects\Dtos\ProjectDto.cs" />
+    <Compile Include="Projects\Dtos\UpdateProjectInput.cs" />
     <Compile Include="Projects\IProjectAppService.cs" />
     <Compile Include="Projects\ProjectAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

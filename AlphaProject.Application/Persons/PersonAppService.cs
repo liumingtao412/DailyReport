@@ -26,7 +26,7 @@ namespace AlphaProject.Persons
 
         public PagedResultOutput<PersonDto> GetPersons(GetPersonsInput input)
         {
-            Logger.Info("Getting Persons for input:" + input.ToString());
+            //Logger.Info("Getting Persons for input:" + input.ToString());
 
             if (input.ProjectId.HasValue)//查询某个项目内的人员
             {
@@ -115,7 +115,7 @@ namespace AlphaProject.Persons
             _personRepository.Update(personToUpdate);
             if (input.UserId.HasValue)
             {
-                _personManager.AssignToUser(input.Id, input.UserId.Value);
+                _personManager.AssignToUser(input.Id.Value, input.UserId.Value);
 
             }
           

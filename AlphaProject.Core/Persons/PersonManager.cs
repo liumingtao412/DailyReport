@@ -17,7 +17,9 @@ namespace AlphaProject.Persons
         private readonly IRepository<Project> _projectRepository;
         private readonly IRepository<User,long> _userRepository;
 
-        public PersonManager(IPersonRepository personRepository, IRepository<Project> projectRepository, IRepository<User, long> userRepository)
+        public PersonManager(IPersonRepository personRepository, IRepository<Project> projectRepository, 
+            IRepository<User, long> userRepository
+             )
         {
             _personRepository = personRepository;
             _projectRepository = projectRepository;
@@ -91,5 +93,6 @@ namespace AlphaProject.Persons
 
             person.SetUser(user);
         }
+
     }
 }

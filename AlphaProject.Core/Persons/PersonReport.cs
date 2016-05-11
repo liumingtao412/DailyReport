@@ -22,6 +22,10 @@ namespace AlphaProject.Persons
         public virtual Person Author { get; set; }
         public virtual int PersonID { get; set; }
 
+        public virtual int ProjectId { get; set; }
+
+        //todo: add a field ProjectID to indicate which project this report belongs to
+
 
     }
 }

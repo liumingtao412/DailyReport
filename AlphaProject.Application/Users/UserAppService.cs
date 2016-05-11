@@ -14,6 +14,7 @@ namespace AlphaProject.Users
         {
             _userManager = userManager;
             _permissionManager = permissionManager;
+            
         }
 
         public async Task ProhibitPermission(ProhibitPermissionInput input)
