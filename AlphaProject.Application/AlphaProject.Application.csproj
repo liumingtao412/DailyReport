@@ -111,6 +111,10 @@
     <Compile Include="Persons\IPersonAppService.cs" />
     <Compile Include="Persons\PersonAppService.cs" />
     <Compile Include="Persons\Dtos\QuitProjectInput.cs" />
+    <Compile Include="Projects\Dtos\GetProjectsInput.cs" />
+    <Compile Include="Projects\Dtos\ProjectDto.cs" />
+    <Compile Include="Projects\IProjectAppService.cs" />
+    <Compile Include="Projects\ProjectAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
     <Compile Include="Roles\Dto\UpdateRolePermissionsInput.cs" />

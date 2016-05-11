@@ -79,7 +79,7 @@ namespace AlphaProject.Persons
         }
 
 
-        public vAssignToUser(int personId, long userId)
+        public void AssignToUser(int personId, long userId)
         {
            // throw new NotImplementedException();
             User user = _userRepository.FirstOrDefault(userId);

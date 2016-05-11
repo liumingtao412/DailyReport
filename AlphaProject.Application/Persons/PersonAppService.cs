@@ -49,7 +49,7 @@ namespace AlphaProject.Persons
             }
             else//查询所有人员
             {
-                var personCount = _personRepository.Count();
+               // var personCount = _personRepository.Count();
                 var persons = _personRepository.GetAll().OrderBy(p => p.Name).PageBy(input);
                 if (!string.IsNullOrEmpty(input.Name))
                 {
@@ -59,6 +59,8 @@ namespace AlphaProject.Persons
                 {
                     persons = persons.Where(p => p.Id == input.PersonId.Value);
                 }
+                var personCount = persons.Count();
+
 
                 return new PagedResultOutput<PersonDto>(
                     personCount,
