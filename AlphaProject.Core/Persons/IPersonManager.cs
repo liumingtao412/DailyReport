@@ -12,5 +12,7 @@ namespace AlphaProject.Persons
     {
         void JoinProject(int personId, int projectId, bool isLeader=false);
         void QuitProject(int personId, int projectId);
+
+        void AssignToUser(int personId, long userId);
     }
 }

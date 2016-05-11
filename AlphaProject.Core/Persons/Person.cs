@@ -28,6 +28,12 @@ namespace AlphaProject.Persons
         public virtual ICollection<Person_Project> Person_Projects { get; set; }
 
 
+        public  void SetUser(User user)
+        {
+            this.User = user;
+        }
+
+
       
 
     }

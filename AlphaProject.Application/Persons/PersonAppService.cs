@@ -81,5 +81,43 @@ namespace AlphaProject.Persons
         {
             _personManager.QuitProject(input.PersonId, input.ProjectId);
         }
+
+
+        public int CreatePerson(CreatePersonInput input)
+        {
+            //throw new NotImplementedException();
+            int newPersonId = _personRepository.InsertAndGetId(Mapper.Map<Person>(input));
+            if (input.UserId.HasValue)
+            {
+                _personManager.AssignToUser(newPersonId, input.UserId.Value);
+
+            }
+            return newPersonId;
+        }
+
+
+        public void DeletePerson(DeletePersonInput input)
+        {
+           // throw new NotImplementedException();
+            
+            _personRepository.Delete(p => input.DeletePersonIds.Contains(p.Id));
+                
+            
+        }
+
+
+        public void UpdatePerson(UpdatePersonInput input)
+        {
+            //throw new NotImplementedException();
+            Person personToUpdate = Mapper.Map<Person>(input);
+            _personRepository.Update(personToUpdate);
+            if (input.UserId.HasValue)
+            {
+                _personManager.AssignToUser(input.Id, input.UserId.Value);
+
+            }
+          
+
+        }
     }
 }

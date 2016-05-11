@@ -12,11 +12,11 @@ namespace AlphaProject.Persons
     public interface IPersonAppService : IApplicationService
     {
         PagedResultOutput<PersonDto> GetPersons(GetPersonsInput input);
-     
-       
-        //void DeletePerson();
-        //void CreatePerson();
-        //void UpdatePerson();
+        void DeletePerson(DeletePersonInput input);
+        int CreatePerson(CreatePersonInput input);
+        void UpdatePerson(UpdatePersonInput input);
+
+
         void JoinProject(JoinProjectInput input);
         void QuitProject(QuitProjectInput input);
       

@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 namespace AlphaProject.Persons.Dtos
 {
     [AutoMapTo(typeof(Person))]
-    public class CreatePersonInput :IInputDto
+    public class UpdatePersonInput : IInputDto
     {
         [Required]
+        public int Id { get; set; }
         public string Name { get; set; }
-        [Required]
+
         public string EMail { get; set; }
 
         public string Mobile { get; set; }
 
         public long? UserId { get; set; }
-
     }
 }
