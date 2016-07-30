@@ -18,6 +18,9 @@ namespace AlphaProject.Api
             DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(AlphaProjectApplicationModule).Assembly, "app")
                 .Build();
+            //通过上述设定，将所有的Application层中的Service公布为WebAPI，其访问路径如下
+            //{主机地址}/api/services/app/｛Service类名称｝/｛方法名称｝
+            //http://localhost:61759/api/services/app/person/GetAllPersons
 
             Configuration.Modules.AbpWebApi().HttpConfiguration.Filters.Add(new HostAuthenticationFilter("Bearer"));
         }
